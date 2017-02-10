@@ -1,32 +1,169 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>--- TODO ---</title>
+  <title>--- TODO ---</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- Leave those next 4 lines if you care about users using IE8 -->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- Leave those next 4 lines if you care about users using IE8 -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+      <![endif]-->
+    </head>
+    <body>
+      <!-- https://kazzkiq.github.io/balloon.css/ -->
+
+      <div class="banner" style="background-image: url('images/background.jpg')">
+        <div class="banner-content">
+          <h1>
+            A cool title
+          </h1>
+          <h2>
+            Some other text, preferrably something a bit longer
+          </h2>
+          <a href="#" class="btn btn-primary">click me</a>
+        </div>
+      </div>
+
+      <!-- EXPLANATION ICONS START HERE -->
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-6 col-lg-3">
+            <div class="explanation-icon text-center">
+              <img src="images/heart.png" alt="heart">
+              <h3>
+                Cool stuff
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, tempore!
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 col-lg-3">
+            <div class="explanation-icon text-center">
+              <img src="images/beer.png" alt="heart">
+              <h3>
+                Cool stuff
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, soluta?
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 col-lg-3">
+            <div class="explanation-icon text-center">
+              <img src="images/money.png" alt="heart">
+              <h3>
+                Cool stuff
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, voluptatem!
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-6 col-lg-3">
+            <div class="explanation-icon text-center">
+              <img src="images/globe.png" alt="heart">
+              <h3>
+                Cool stuff
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, cupiditate!
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- EXPLANATION ICONS END HERE -->
 
 
+      <!-- SNEAK PREVIEW OF ERB -->
+      <!-- THIS STUFF DOESN"T WORK WITHOUT A FRAMEWORK -->
+      <div class="container">
+        <div class="row">
 
-    <!-- TODO: Here goes your content! -->
+          <% array_of_hashes = [
+            {name: "heart", header: "Cool stuff1", text: "lorem ipsum whatever"},
+            {name: "money", header: "Cool stuff2", text: "lorem ipsum whatever"},
+            {name: "beer", header: "Cool stuff3", text: "lorem ipsum whatever"},
+            {name: "globe", header: "Cool stuff4", text: "lorem ipsum whatever"}] %>
+
+            <% array_of_hashes.each do |hash| %>
+
+            <div class="col-xs-6 col-lg-3">
+              <div class="explanation-icon text-center">
+                <img src="images/<%= hash[:name] %>.png" alt="heart">
+                <h3>
+                  <%= hash[:header] %>
+                </h3>
+                <p>
+                  <%= hash[:text] %>
+                </p>
+              </div>
+            </div>
+
+            <% end %>
+
+          </div>
+        </div>
+
+        <!-- END SNEAK PREVIEW OF ERB -->
 
 
+        <div class="newsletter text-center padded">
+          <h2>
+            Join our newsletter
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, suscipit!
+          </p>
+          <form action="/" class="form-inline">
+            <input type="email" placeholder="Enter your email" class="form-control">
+            <input type="submit" class="btn btn-primary">
+          </form>
+        </div>
 
-    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
-</html>
+
+        <div class="footer">
+          <ul class="list-inline">
+            <li>
+              <a href="#">
+                <i class="fa fa-facebook fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-instagram fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-github fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-pinterest fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, cumque.
+          </p>
+        </div>
+
+        <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      </body>
+      </html>

@@ -1,0 +1,12 @@
+@import "components/banner.css";
+@import "components/footer.css";
+@import "components/card.css";
+@import "components/avatar.css";
+
+.padded {
+  padding: 100px 0;
+}
+
+.explanation-icon {
+  width: 300px;
+}
